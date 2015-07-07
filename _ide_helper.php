@@ -1079,7 +1079,7 @@ namespace {
          * @static 
          */
         public static function handle($input, $output = null){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             return \App\Console\Kernel::handle($input, $output);
         }
         
@@ -1092,7 +1092,7 @@ namespace {
          * @static 
          */
         public static function terminate($input, $status){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             \App\Console\Kernel::terminate($input, $status);
         }
         
@@ -1105,7 +1105,7 @@ namespace {
          * @static 
          */
         public static function call($command, $parameters = array()){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             return \App\Console\Kernel::call($command, $parameters);
         }
         
@@ -1118,7 +1118,7 @@ namespace {
          * @static 
          */
         public static function queue($command, $parameters = array()){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             \App\Console\Kernel::queue($command, $parameters);
         }
         
@@ -1129,7 +1129,7 @@ namespace {
          * @static 
          */
         public static function all(){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             return \App\Console\Kernel::all();
         }
         
@@ -1140,7 +1140,7 @@ namespace {
          * @static 
          */
         public static function output(){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             return \App\Console\Kernel::output();
         }
         
@@ -1151,7 +1151,7 @@ namespace {
          * @static 
          */
         public static function bootstrap(){
-            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            //Method inherited from \Illuminate\Foundation\console\Kernel
             \App\Console\Kernel::bootstrap();
         }
         

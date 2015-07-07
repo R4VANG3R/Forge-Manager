@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'Dashboard\DashboardController@ShowIndex');
+
+Route::get('/console', 'Console\ConsoleController@ShowIndex');

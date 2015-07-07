@@ -3,21 +3,22 @@
  * Created by PhpStorm.
  * User: R4VANG3R
  * Date: 7-7-2015
- * Time: 13:21
+ * Time: 17:04
  */
 
-namespace ForgeManager\Http\Controllers\Dashboard;
+namespace ForgeManager\Http\Controllers\Console;
+
 
 use ForgeManager\Http\Controllers\Controller;
 
-class DashboardController extends Controller {
+class ConsoleController extends Controller {
+
     public function __construct()
     {
     }
 
     public function ShowIndex()
     {
-        // Return the view
-        return view('dashboard.index');
+        return view('console.index');
     }
 }

@@ -1,2 +1,66 @@
+// Variables
+$brand-primary: #FF5722;
+$brand-white: #F0F0F0;
+
+$navbar-inverse-bg: #333;
+$navbar-inverse-border: 1px solid #333;
+
+// Imports
 @import "../../../vendor/twbs/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Custom SCSS
+body, html {
+  background-color: $brand-white;
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid $brand-primary;
+
+  background: #333;
+  color: $brand-white;
+
+  min-height: 100%;
+
+  .nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+
+  ul {
+    li {
+      a {
+        color: $brand-primary;
+      }
+
+      &.active {
+        background-color: $brand-white;
+
+        a:hover {
+          background-color: $brand-primary;
+          color: $brand-white;
+        }
+      }
+
+      a:hover {
+        background-color: $brand-primary;
+        color: $brand-white;
+      }
+    }
+  }
+}
