@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => App\User::class,
+        'model'  => ForgeManager\User::class,
         'key'    => '',
         'secret' => '',
     ],

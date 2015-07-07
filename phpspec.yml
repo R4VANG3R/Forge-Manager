@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: ForgeManager
+        psr4_prefix: ForgeManager
         src_path: app

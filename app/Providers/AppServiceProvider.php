@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace ForgeManager\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

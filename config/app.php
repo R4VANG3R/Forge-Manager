@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', '78BSz0LSO0VBjajRRRaP33kJshQvBnaO'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -140,9 +140,12 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        ForgeManager\Providers\AppServiceProvider::class,
+        ForgeManager\Providers\EventServiceProvider::class,
+        ForgeManager\Providers\RouteServiceProvider::class,
+
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, // Laravel IDE helper
+        //'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // Laravel IDE helper
 
     ],
 
