@@ -376,6 +376,7 @@ return array(
     'ForgeManager\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'ForgeManager\\Http\\Controllers\\Auth\\AuthController' => $baseDir . '/app/Http/Controllers/Auth/AuthController.php',
     'ForgeManager\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
+    'ForgeManager\\Http\\Controllers\\Console\\ConsoleController' => $baseDir . '/app/Http/Controllers/Console/ConsoleController.php',
     'ForgeManager\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'ForgeManager\\Http\\Controllers\\Dashboard\\DashboardController' => $baseDir . '/app/Http/Controllers/Dashboard/DashboardController.php',
     'ForgeManager\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

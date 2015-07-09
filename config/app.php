@@ -137,16 +137,14 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, // Laravel IDE helper
+
         /*
          * Application Service Providers...
          */
         ForgeManager\Providers\AppServiceProvider::class,
         ForgeManager\Providers\EventServiceProvider::class,
         ForgeManager\Providers\RouteServiceProvider::class,
-
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, // Laravel IDE helper
-        //'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // Laravel IDE helper
-
     ],
 
     /*

@@ -15,162 +15,196 @@
 @section('scripts')
     @parent
     {{--append here--}}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 @endsection
 
 @section('body')
     @parent
     {{--append here--}}
-    <h1 class="page-header">Dashboard</h1>
-    <div class="row placeholders">
-        <div class="col-xs-6 col-sm-3 placeholder">
-            <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-            <h4>Label</h4>
-            <span class="text-muted">Something else</span>
+    <div class="row">
+        <div class="col-md-6">
+            {{-- System resources chart --}}
+            <h2 class="no-top-margin"><i class="fa fa-area-chart"></i> Server resource usage</h2>
+            <div id="chart-resources"></div>
         </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-            <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-            <h4>Label</h4>
-            <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-            <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-            <h4>Label</h4>
-            <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-            <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-            <h4>Label</h4>
-            <span class="text-muted">Something else</span>
+
+        <div class="col-md-6">
+            {{-- Concurrent players chart --}}
+            <h2 class="no-top-margin"><i class="fa fa-area-chart"></i> Concurrent players</h2>
+            <div id="chart-players"></div>
         </div>
     </div>
 
-    <h2 class="sub-header">Section title</h2>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-            </tr>
-            <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>Integer</td>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-            </tr>
-            <tr>
-                <td>1,003</td>
-                <td>libero</td>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-            </tr>
-            <tr>
-                <td>1,004</td>
-                <td>dapibus</td>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-            </tr>
-            <tr>
-                <td>1,005</td>
-                <td>Nulla</td>
-                <td>quis</td>
-                <td>sem</td>
-                <td>at</td>
-            </tr>
-            <tr>
-                <td>1,006</td>
-                <td>nibh</td>
-                <td>elementum</td>
-                <td>imperdiet</td>
-                <td>Duis</td>
-            </tr>
-            <tr>
-                <td>1,007</td>
-                <td>sagittis</td>
-                <td>ipsum</td>
-                <td>Praesent</td>
-                <td>mauris</td>
-            </tr>
-            <tr>
-                <td>1,008</td>
-                <td>Fusce</td>
-                <td>nec</td>
-                <td>tellus</td>
-                <td>sed</td>
-            </tr>
-            <tr>
-                <td>1,009</td>
-                <td>augue</td>
-                <td>semper</td>
-                <td>porta</td>
-                <td>Mauris</td>
-            </tr>
-            <tr>
-                <td>1,010</td>
-                <td>massa</td>
-                <td>Vestibulum</td>
-                <td>lacinia</td>
-                <td>arcu</td>
-            </tr>
-            <tr>
-                <td>1,011</td>
-                <td>eget</td>
-                <td>nulla</td>
-                <td>Class</td>
-                <td>aptent</td>
-            </tr>
-            <tr>
-                <td>1,012</td>
-                <td>taciti</td>
-                <td>sociosqu</td>
-                <td>ad</td>
-                <td>litora</td>
-            </tr>
-            <tr>
-                <td>1,013</td>
-                <td>torquent</td>
-                <td>per</td>
-                <td>conubia</td>
-                <td>nostra</td>
-            </tr>
-            <tr>
-                <td>1,014</td>
-                <td>per</td>
-                <td>inceptos</td>
-                <td>himenaeos</td>
-                <td>Curabitur</td>
-            </tr>
-            <tr>
-                <td>1,015</td>
-                <td>sodales</td>
-                <td>ligula</td>
-                <td>in</td>
-                <td>libero</td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>
+                <i class="fa fa-info-circle"></i> Server information
+
+                <div class="btn-group pull-right" role="group">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-play"></i> Start</button>
+                    <button type="button" class="btn btn-default"><i class="fa fa-repeat"></i> Restart</button>
+                    <button type="button" class="btn btn-danger"><i class="fa fa-stop"></i> Stop</button>
+                </div>
+            </h2>
+
+            <p>
+                <i class="server-status fa fa-circle"></i> Server is online.&nbsp;
+                <span title="Server uptime">
+                    <i class="fa fa-clock-o"></i><span id="server-uptime"> 0 Days 4 Hours 11 Minutes.</span>
+                </span>
+            </p>
+            <p title="Server uptime">
+
+            </p>
+
+            <h3>R4VANG3Rs FTB Server<br>
+                <small>Infinity 1.7 with extras <span class="label label-default">MOTD</span></small>
+            </h3>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>Modpack</th>
+                        <td>Feed the Beast: Infinity</td>
+                    </tr>
+
+                    <tr>
+                        <th>Game mode</th>
+                        <td>Survival</td>
+                    </tr>
+
+                    <tr>
+                        <th>Difficulty</th>
+                        <td>Normal</td>
+                    </tr>
+
+                    <tr>
+                        <th>Hardcore mode</th>
+                        <td>No</td>
+                    </tr>
+                </table>
+            </div>
+
+            {{--<div class="btn-group" role="group">--}}
+                {{--<button type="button" class="btn btn-primary"><i class="fa fa-play"></i> Start</button>--}}
+                {{--<button type="button" class="btn btn-default"><i class="fa fa-repeat"></i> Restart</button>--}}
+                {{--<button type="button" class="btn btn-danger"><i class="fa fa-stop"></i> Stop</button>--}}
+            {{--</div>--}}
+        </div>
+
+        <section class="col-md-6">
+            <h2><i class="fa fa-users"></i> Online Players <small> <span id="currentPlayers">4</span> / <span id="maxPlayers">20</span></small></h2>
+
+            <div class="players clearfix">
+                <div class="player col-md-6">
+                    <div class="player-box clearfix">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
+                            <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                        </div>
+
+                        <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
+                        <div class="col-md-9">
+                            <h3 class="player-username">Direwolf20</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Online</th>
+                                        <td class="player-time-online">2 Hours 10 Minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>IP</th>
+                                        <td class="player-ip-address">192.168.1.1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player col-md-6">
+                    <div class="player-box clearfix">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
+                            <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                        </div>
+
+                        <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
+                        <div class="col-md-9">
+                            <h3 class="player-username">Soaryn</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Online</th>
+                                        <td class="player-time-online">2 Hours 10 Minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>IP</th>
+                                        <td class="player-ip-address">192.168.1.1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player col-md-6">
+                    <div class="player-box clearfix">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
+                            <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                        </div>
+
+                        <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
+                        <div class="col-md-9">
+                            <h3 class="player-username">RWTema</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Online</th>
+                                        <td class="player-time-online">2 Hours 10 Minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>IP</th>
+                                        <td class="player-ip-address">192.168.1.1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player col-md-6">
+                    <div class="player-box clearfix">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
+                            <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                        </div>
+
+                        <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
+                        <div class="col-md-9">
+                            <h3 class="player-username">Fireball1725</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Online</th>
+                                        <td class="player-time-online">2 Hours 10 Minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>IP</th>
+                                        <td class="player-ip-address">192.168.1.1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 @endsection
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.1.6 (LTS) on 2015-07-07.
+ * Generated for Laravel 5.1.6 (LTS) on 2015-07-08.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1079,8 +1079,8 @@ namespace {
          * @static 
          */
         public static function handle($input, $output = null){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            return \App\Console\Kernel::handle($input, $output);
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            return \ForgeManager\Console\Kernel::handle($input, $output);
         }
         
         /**
@@ -1092,8 +1092,8 @@ namespace {
          * @static 
          */
         public static function terminate($input, $status){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            \App\Console\Kernel::terminate($input, $status);
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            \ForgeManager\Console\Kernel::terminate($input, $status);
         }
         
         /**
@@ -1105,8 +1105,8 @@ namespace {
          * @static 
          */
         public static function call($command, $parameters = array()){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            return \App\Console\Kernel::call($command, $parameters);
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            return \ForgeManager\Console\Kernel::call($command, $parameters);
         }
         
         /**
@@ -1118,8 +1118,8 @@ namespace {
          * @static 
          */
         public static function queue($command, $parameters = array()){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            \App\Console\Kernel::queue($command, $parameters);
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            \ForgeManager\Console\Kernel::queue($command, $parameters);
         }
         
         /**
@@ -1129,8 +1129,8 @@ namespace {
          * @static 
          */
         public static function all(){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            return \App\Console\Kernel::all();
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            return \ForgeManager\Console\Kernel::all();
         }
         
         /**
@@ -1140,8 +1140,8 @@ namespace {
          * @static 
          */
         public static function output(){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            return \App\Console\Kernel::output();
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            return \ForgeManager\Console\Kernel::output();
         }
         
         /**
@@ -1151,8 +1151,8 @@ namespace {
          * @static 
          */
         public static function bootstrap(){
-            //Method inherited from \Illuminate\Foundation\console\Kernel
-            \App\Console\Kernel::bootstrap();
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            \ForgeManager\Console\Kernel::bootstrap();
         }
         
     }
@@ -1260,7 +1260,7 @@ namespace {
         /**
          * Get the currently authenticated user.
          *
-         * @return \App\User|null 
+         * @return \ForgeManager\User|null 
          * @static 
          */
         public static function user(){
@@ -1362,7 +1362,7 @@ namespace {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\User 
+         * @return \ForgeManager\User 
          * @static 
          */
         public static function loginUsingId($id, $remember = false){
@@ -1467,7 +1467,7 @@ namespace {
         /**
          * Return the currently cached user.
          *
-         * @return \App\User|null 
+         * @return \ForgeManager\User|null 
          * @static 
          */
         public static function getUser(){
@@ -1509,7 +1509,7 @@ namespace {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\User 
+         * @return \ForgeManager\User 
          * @static 
          */
         public static function getLastAttempted(){
@@ -11847,6 +11847,54 @@ namespace {
          */
         public static function getNames(){
             return \Illuminate\View\Factory::getNames();
+        }
+        
+    }
+
+
+    class Lava extends \Khill\Lavacharts\Laravel\LavachartsFacade{
+        
+        /**
+         * Renders the chart into the page
+         * 
+         * Given a chart label and an HTML element id, this will output
+         * all of the necessary javascript to generate the chart.
+         *
+         * @access public
+         * @since v2.0.0
+         * @param string $chartType Type of chart to render.
+         * @param string $chartLabel Label of a saved chart.
+         * @param string $elementId HTML element id to render the chart into.
+         * @param mixed $divDimensions Set true for div creation, or pass an array with height & width
+         * @return string 
+         * @static 
+         */
+        public static function render($chartType, $chartLabel, $elementId, $divDimensions = false){
+            return \Khill\Lavacharts\Lavacharts::render($chartType, $chartLabel, $elementId, $divDimensions);
+        }
+        
+        /**
+         * Outputs the link to the Google JSAPI
+         *
+         * @access public
+         * @since v2.3.0
+         * @return string 
+         * @static 
+         */
+        public static function jsapi(){
+            return \Khill\Lavacharts\Lavacharts::jsapi();
+        }
+        
+        /**
+         * Checks to see if the given chart type and title exists in the volcano storage.
+         *
+         * @access public
+         * @since v2.4.2
+         * @return string 
+         * @static 
+         */
+        public static function exists($type, $label){
+            return \Khill\Lavacharts\Lavacharts::exists($type, $label);
         }
         
     }

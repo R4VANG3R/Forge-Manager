@@ -1,5 +1,5 @@
 // Variables
-$brand-primary: #FF5722;
+$brand-primary: #E65100; //#FF5722;
 $brand-white: #F0F0F0;
 
 $navbar-inverse-bg: #333;
@@ -7,16 +7,49 @@ $navbar-inverse-border: 1px solid #333;
 
 // Imports
 @import "../../../vendor/twbs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../vendor/components/font-awesome/scss/font-awesome";
 
 // Custom SCSS
 body, html {
   background-color: $brand-white;
+  font-family: 'Roboto', 'Verdana', sans-serif;
 }
 
 .page-header {
   padding-bottom: 9px;
   margin: 0 0 20px;
   border-bottom: 1px solid #eee;
+}
+
+.topbar {
+  ul {
+    li {
+      a {
+        display: block;
+        position: relative;
+        font-size: 18px;
+
+        i {
+          color: $brand-white;
+        }
+
+        .notification-count {
+          width: 15px;
+          height: 15px;
+          line-height: 15px;
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          display: block;
+          border-radius: 50%;
+          background: $brand-primary;
+          color: $brand-white;
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 .sidebar {
@@ -29,7 +62,7 @@ body, html {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  border-right: 1px solid $brand-primary;
+//  border-right: 1px solid $brand-primary;
 
   background: #333;
   color: $brand-white;
@@ -40,27 +73,97 @@ body, html {
     margin-right: -21px;
     margin-bottom: 20px;
     margin-left: -20px;
-  }
 
-  ul {
     li {
       a {
-        color: $brand-primary;
+        color: $brand-white;
       }
 
       &.active {
-        background-color: $brand-white;
+        background-color: darken($brand-white, 25%);
+        border-left: 10px solid $brand-primary;
+
+        a {
+          color: #333;
+        }
 
         a:hover {
-          background-color: $brand-primary;
+          background-color: darken($brand-primary, 10%);
           color: $brand-white;
         }
       }
 
       a:hover {
-        background-color: $brand-primary;
+        background-color: darken($brand-primary, 10%);
         color: $brand-white;
       }
+    }
+  }
+}
+
+.players {
+  .player {
+    padding-bottom: 15px;
+
+    .player-box {
+      position: relative;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+      .player-icon {
+        padding: 0;
+      }
+
+      .player-username {
+        margin-top: 5px;
+      }
+
+      .table {
+        margin-bottom: 0;
+
+        tr {
+          th, td {
+            padding: 2px 0;
+          }
+
+          &:last-child {
+            th, td {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .btn-group {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        button {
+          padding: 0 6px;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.server-status {
+  color: #4CAF50;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px rgba(76, 175, 80, .5);
+}
+
+.no-top-margin {
+  margin-top: 0;
+}
+
+.table {
+  tr:last-child {
+    td, th {
+      border-bottom: 1px solid #ddd;
     }
   }
 }

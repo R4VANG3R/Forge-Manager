@@ -11,6 +11,11 @@
 |
 */
 
+// Dashboard
 Route::get('/', 'Dashboard\DashboardController@ShowIndex');
 
+Route::resource('/dashboard/resource', 'Dashboard\DashboardController@GetResourceUsage');
+Route::resource('/dashboard/players', 'Dashboard\DashboardController@GetConcurrentPlayers');
+
+// Console
 Route::get('/console', 'Console\ConsoleController@ShowIndex');

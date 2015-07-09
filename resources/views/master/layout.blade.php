@@ -10,11 +10,13 @@
 
     @section('css')
     {{-- CSS --}}
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link href="/css/app.css" rel="stylesheet" type="text/css">
     @show
 
     @section('scripts')
     {{-- JS --}}
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     @show
 </head>
 <body>

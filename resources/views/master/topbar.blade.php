@@ -1,5 +1,5 @@
 {{-- Top menu --}}
-<nav class="navbar navbar-inverse navbar-static-top">
+<nav class="topbar navbar navbar-inverse navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,9 +12,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li>
+                    <a href="#" title="Notifications">
+                        <i class="fa fa-inbox"></i>
+                        <div class="notification-count">
+                            <span>4</span>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#" title="Settings"><i class="fa fa-cogs"></i></a></li>
+                <li><a href="https://github.com/R4VANG3R/forge-manager" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>
             </ul>
         </div>
     </div>
