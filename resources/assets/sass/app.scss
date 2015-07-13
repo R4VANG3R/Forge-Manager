@@ -22,6 +22,10 @@ body, html {
 }
 
 .topbar {
+  .container-fluid {
+    padding-left: 5px;
+  }
+
   ul {
     li {
       a {
@@ -48,6 +52,12 @@ body, html {
           text-align: center;
         }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .navbar-toggle {
+      display: block;
     }
   }
 }
@@ -77,93 +87,67 @@ body, html {
     li {
       a {
         color: $brand-white;
+        transition: border 0.2s ease, background 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            background-color: darken($brand-white, 10%);
+            color: #333;
+            border-left: 10px solid darken($brand-primary, 10%);
+        }
       }
 
       &.active {
-        background-color: darken($brand-white, 25%);
+        background-color: $brand-white;
         border-left: 10px solid $brand-primary;
 
         a {
           color: #333;
-        }
 
-        a:hover {
-          background-color: darken($brand-primary, 10%);
-          color: $brand-white;
-        }
-      }
-
-      a:hover {
-        background-color: darken($brand-primary, 10%);
-        color: $brand-white;
-      }
-    }
-  }
-}
-
-.players {
-  .player {
-    padding-bottom: 15px;
-
-    .player-box {
-      position: relative;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-
-      .player-icon {
-        padding: 0;
-      }
-
-      .player-username {
-        margin-top: 5px;
-      }
-
-      .table {
-        margin-bottom: 0;
-
-        tr {
-          th, td {
-            padding: 2px 0;
+          &:hover {
+            background-color: darken($brand-primary, 10%);
+            color: $brand-white;
+            border-left-width: 0;
           }
-
-          &:last-child {
-            th, td {
-              border-bottom: 0;
-            }
-          }
-        }
-      }
-
-      .btn-group {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        button {
-          padding: 0 6px;
-          border-radius: 0;
         }
       }
     }
   }
-}
 
-.server-status {
-  color: #4CAF50;
-  width: 12px;
-  height: 12px;
-  line-height: 12px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgba(76, 175, 80, .5);
-}
+  &.collapsed {
+    width: 50px;
 
-.no-top-margin {
-  margin-top: 0;
-}
+    li {
+      a {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
 
-.table {
-  tr:last-child {
-    td, th {
-      border-bottom: 1px solid #ddd;
+        i {
+          text-indent: -250%;
+        }
+
+        &:hover {
+          border-left-width: 5px;
+
+          i {
+            text-indent: -335%;
+          }
+        }
+      }
+
+      &.active {
+        border-left-width: 5px;
+
+        a {
+          i {
+            text-indent: -300%;
+          }
+
+          &:hover {
+            border-left-width: 0;
+          }
+        }
+      }
     }
   }
 }

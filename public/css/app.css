@@ -7594,6 +7594,8 @@ body, html {
   margin: 0 0 20px;
   border-bottom: 1px solid #eee; }
 
+.topbar .container-fluid {
+  padding-left: 5px; }
 .topbar ul li a {
   display: block;
   position: relative;
@@ -7613,6 +7615,9 @@ body, html {
     color: #F0F0F0;
     font-size: 10px;
     text-align: center; }
+@media (min-width: 768px) {
+  .topbar .navbar-toggle {
+    display: block; } }
 
 .sidebar {
   position: fixed;
@@ -7632,54 +7637,38 @@ body, html {
     margin-bottom: 20px;
     margin-left: -20px; }
     .sidebar .nav-sidebar li a {
-      color: #F0F0F0; }
+      color: #F0F0F0;
+      transition: border 0.2s ease, background 0.2s ease, color 0.2s; }
+      .sidebar .nav-sidebar li a:hover {
+        background-color: #d7d7d7;
+        color: #333;
+        border-left: 10px solid #b33f00; }
     .sidebar .nav-sidebar li.active {
-      background-color: #b0b0b0;
+      background-color: #F0F0F0;
       border-left: 10px solid #E65100; }
       .sidebar .nav-sidebar li.active a {
         color: #333; }
-      .sidebar .nav-sidebar li.active a:hover {
-        background-color: #b33f00;
-        color: #F0F0F0; }
-    .sidebar .nav-sidebar li a:hover {
-      background-color: #b33f00;
-      color: #F0F0F0; }
-
-.players .player {
-  padding-bottom: 15px; }
-  .players .player .player-box {
-    position: relative;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }
-    .players .player .player-box .player-icon {
-      padding: 0; }
-    .players .player .player-box .player-username {
-      margin-top: 5px; }
-    .players .player .player-box .table {
-      margin-bottom: 0; }
-      .players .player .player-box .table tr th, .players .player .player-box .table tr td {
-        padding: 2px 0; }
-      .players .player .player-box .table tr:last-child th, .players .player .player-box .table tr:last-child td {
-        border-bottom: 0; }
-    .players .player .player-box .btn-group {
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .players .player .player-box .btn-group button {
-        padding: 0 6px;
-        border-radius: 0; }
-
-.server-status {
-  color: #4CAF50;
-  width: 12px;
-  height: 12px;
-  line-height: 12px;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgba(76, 175, 80, 0.5); }
-
-.no-top-margin {
-  margin-top: 0; }
-
-.table tr:last-child td, .table tr:last-child th {
-  border-bottom: 1px solid #ddd; }
+        .sidebar .nav-sidebar li.active a:hover {
+          background-color: #b33f00;
+          color: #F0F0F0;
+          border-left-width: 0; }
+  .sidebar.collapsed {
+    width: 50px; }
+    .sidebar.collapsed li a {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden; }
+      .sidebar.collapsed li a i {
+        text-indent: -250%; }
+      .sidebar.collapsed li a:hover {
+        border-left-width: 5px; }
+        .sidebar.collapsed li a:hover i {
+          text-indent: -335%; }
+    .sidebar.collapsed li.active {
+      border-left-width: 5px; }
+      .sidebar.collapsed li.active a i {
+        text-indent: -300%; }
+      .sidebar.collapsed li.active a:hover {
+        border-left-width: 0; }
 
 /*# sourceMappingURL=app.css.map */

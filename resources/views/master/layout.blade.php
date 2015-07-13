@@ -38,6 +38,7 @@
 
     @section('js')
         {{--JS--}}
+        @include('master.scripts')
     @show
 </body>
 </html>

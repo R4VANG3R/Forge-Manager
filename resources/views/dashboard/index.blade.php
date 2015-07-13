@@ -10,6 +10,7 @@
 @section('css')
     @parent
     {{--append here--}}
+    <link href="/css/dashboard.css" type="text/css" rel="stylesheet">
 @endsection
 
 @section('scripts')
@@ -40,11 +41,11 @@
             <h2>
                 <i class="fa fa-info-circle"></i> Server information
 
-                <div class="btn-group pull-right" role="group">
+                <span class="btn-group pull-right" role="group">
                     <button type="button" class="btn btn-primary"><i class="fa fa-play"></i> Start</button>
                     <button type="button" class="btn btn-default"><i class="fa fa-repeat"></i> Restart</button>
                     <button type="button" class="btn btn-danger"><i class="fa fa-stop"></i> Stop</button>
-                </div>
+                </span>
             </h2>
 
             <p>
@@ -84,12 +85,6 @@
                     </tr>
                 </table>
             </div>
-
-            {{--<div class="btn-group" role="group">--}}
-                {{--<button type="button" class="btn btn-primary"><i class="fa fa-play"></i> Start</button>--}}
-                {{--<button type="button" class="btn btn-default"><i class="fa fa-repeat"></i> Restart</button>--}}
-                {{--<button type="button" class="btn btn-danger"><i class="fa fa-stop"></i> Stop</button>--}}
-            {{--</div>--}}
         </div>
 
         <section class="col-md-6">
@@ -101,12 +96,44 @@
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
                             <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
-                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-ban"></i></button>
+                        </div>
+
+                        <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
+                        <div class="col-md-9">
+                            <h3 class="player-username">Pahimar</h3>
+                            <p class="labels">
+                                <span class="label label-default">Admin</span>
+                                <span class="label label-default">OP</span>
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Online</th>
+                                        <td class="player-time-online">3 Hours 10 Minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>IP</th>
+                                        <td class="player-ip-address">192.168.1.1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player col-md-6">
+                    <div class="player-box clearfix">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
+                            <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-ban"></i></button>
                         </div>
 
                         <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
                         <div class="col-md-9">
                             <h3 class="player-username">Direwolf20</h3>
+                            <p><span class="label label-default">OP</span></p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <tr>
@@ -128,7 +155,7 @@
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
                             <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
-                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-ban"></i></button>
                         </div>
 
                         <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
@@ -155,7 +182,7 @@
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
                             <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
-                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-ban"></i></button>
                         </div>
 
                         <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">
@@ -182,7 +209,7 @@
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-default" title="Flag"><i class="fa fa-flag"></i></button>
                             <button type="button" class="btn btn-warning" title="Kick"><i class="fa fa-clock-o"></i></button>
-                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-minus-circle"></i></button>
+                            <button type="button" class="btn btn-danger" title="Ban"><i class="fa fa-ban"></i></button>
                         </div>
 
                         <img src="/img/steve.png" class="player-icon col-md-3 img-responsive">

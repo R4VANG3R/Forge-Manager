@@ -1,0 +1,44 @@
+.main-content.collapsed {
+  padding-left: 65px;
+  margin-left: 0;
+  width: 100%; }
+
+.players .player {
+  padding-bottom: 15px; }
+  .players .player .player-box {
+    position: relative;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .players .player .player-box .player-icon {
+      padding: 0; }
+    .players .player .player-box .player-username {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    .players .player .player-box .table {
+      margin-bottom: 0; }
+      .players .player .player-box .table tr th, .players .player .player-box .table tr td {
+        padding: 2px 0; }
+      .players .player .player-box .table tr:last-child th, .players .player .player-box .table tr:last-child td {
+        border-bottom: 0; }
+    .players .player .player-box .btn-group {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .players .player .player-box .btn-group button {
+        padding: 0 6px;
+        border-radius: 0; }
+
+.server-status {
+  color: #4CAF50;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px rgba(76, 175, 80, 0.5); }
+
+.no-top-margin {
+  margin-top: 0; }
+
+.table tr:last-child td, .table tr:last-child th {
+  border-bottom: 1px solid #ddd; }
+
+/*# sourceMappingURL=dashboard.css.map */
