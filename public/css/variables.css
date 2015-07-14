@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "$brand-primary ": expected ":", was "="
+        on line 1 of variables.scss
+
+1: $brand-primary =
+
+Backtrace:
+variables.scss:1
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:1162:in `expected'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:1098:in `expected'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:1093:in `tok!'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:602:in `variable'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:657:in `block_child'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:647:in `block_contents'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:117:in `stylesheet'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/scss/parser.rb:42:in `parse'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/engine.rb:403:in `_to_tree'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/engine.rb:295:in `render_with_sourcemap'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `each'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/plugin.rb:82:in `update_stylesheets'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/exec/sass_scss.rb:364:in `watch_or_update'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/exec/sass_scss.rb:51:in `process_result'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/exec/base.rb:52:in `parse'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/lib/sass/exec/base.rb:19:in `parse!'
+E:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.15/bin/scss:13:in `<top (required)>'
+E:/Ruby21/bin/scss:23:in `load'
+E:/Ruby21/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$brand-primary \": expected \":\", was \"=\"\A         on line 1 of variables.scss\A \A 1: $brand-primary ="; }

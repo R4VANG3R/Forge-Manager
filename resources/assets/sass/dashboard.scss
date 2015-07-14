@@ -1,11 +1,4 @@
-.main-content {
-
-  &.collapsed {
-    padding-left: 65px;
-    margin-left: 0;
-    width: 100%;
-  }
-}
+@import "variables";
 
 .players {
   .player {

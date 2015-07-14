@@ -7589,6 +7589,11 @@ body, html {
   background-color: #F0F0F0;
   font-family: 'Roboto', 'Verdana', sans-serif; }
 
+.main-content.collapsed {
+  padding-left: 65px;
+  margin-left: 0;
+  width: 100%; }
+
 .page-header {
   padding-bottom: 9px;
   margin: 0 0 20px;
@@ -7638,7 +7643,7 @@ body, html {
     margin-left: -20px; }
     .sidebar .nav-sidebar li a {
       color: #F0F0F0;
-      transition: border 0.2s ease, background 0.2s ease, color 0.2s; }
+      transition: border 0.2s ease, background 0.2s ease, color 0.2s ease; }
       .sidebar .nav-sidebar li a:hover {
         background-color: #d7d7d7;
         color: #333;

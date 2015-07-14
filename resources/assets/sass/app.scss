@@ -1,11 +1,5 @@
-// Variables
-$brand-primary: #E65100; //#FF5722;
-$brand-white: #F0F0F0;
-
-$navbar-inverse-bg: #333;
-$navbar-inverse-border: 1px solid #333;
-
 // Imports
+@import "variables";
 @import "../../../vendor/twbs/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../vendor/components/font-awesome/scss/font-awesome";
 
@@ -13,6 +7,15 @@ $navbar-inverse-border: 1px solid #333;
 body, html {
   background-color: $brand-white;
   font-family: 'Roboto', 'Verdana', sans-serif;
+}
+
+.main-content {
+
+  &.collapsed {
+    padding-left: 65px;
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .page-header {

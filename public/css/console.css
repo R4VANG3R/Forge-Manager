@@ -1,0 +1,31 @@
+#console {
+  height: 720px; }
+  #console #console-output {
+    padding: 5px;
+    height: 100%;
+    border-bottom: 0;
+    background: #333;
+    color: #F0F0F0;
+    overflow-y: auto;
+    line-height: 24px;
+    white-space: pre-line; }
+  #console .console-input-form .form-group:first-child {
+    padding-left: 0;
+    padding-right: 0; }
+  #console .console-input-form .form-group:last-child {
+    padding-left: 0;
+    padding-right: 0; }
+  #console .console-input-form #console-input {
+    background: #333;
+    color: #F0F0F0;
+    border-top: 1px solid #E65100;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0; }
+  #console .console-input-form button, #console .console-input-form input {
+    width: 100%;
+    border-radius: 0; }
+  #console .console-input-form button {
+    border-top: 2px solid #E65100; }
+
+/*# sourceMappingURL=console.css.map */

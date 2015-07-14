@@ -1,0 +1,49 @@
+@import "variables";
+
+#console {
+  height: 720px;
+
+  #console-output {
+    padding: 5px;
+    //height: 720px; // @TODO: placeholder value
+    height: 100%;
+    border-bottom: 0;
+    background: #333;
+    color: $brand-white;
+    overflow-y: auto;
+
+    line-height: 24px;
+    white-space: pre-line;
+  }
+
+  .console-input-form {
+    .form-group:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .form-group:last-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    #console-input {
+      background: #333;
+      color: $brand-white;
+      border-top: 1px solid $brand-primary;
+      border-right: 0;
+      border-bottom: 0;
+      border-left: 0;
+    }
+
+    button, input {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    button {
+      border-top: 2px solid $brand-primary;
+    }
+  }
+}
+
