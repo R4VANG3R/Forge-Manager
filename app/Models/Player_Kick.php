@@ -13,13 +13,6 @@ class Player_Kick extends Model {
     protected $fillable = ['reason'];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = ['timestamp'];
-
-    /**
      * Get the player this kick was associated with.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
